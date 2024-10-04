@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CKLab Medical Demo Survey</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #0a2136;
+            text-align: center;
+        }
+        .survey-question {
+            margin: 15px 0;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+        }
+        button {
+            background-color: #0eb3c7;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0a98a3;
+        }
+        .rating {
+            display: flex;
+            justify-content: space-between;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>CKLab Medical Demo Survey</h1>
+        <p>We value your feedback! Please complete this short survey about your recent telehealth consultation.</p>
+
+        <form>
+            <!-- Video Quality -->
+            <div class="survey-question">
+                <label for="video-quality">How would you rate the video quality of your teleconsultation?</label>
+                <div class="rating">
+                    <label><input type="radio" name="video-quality" value="1"> 1 (Poor)</label>
+                    <label><input type="radio" name="video-quality" value="2"> 2</label>
+                    <label><input type="radio" name="video-quality" value="3"> 3</label>
+                    <label><input type="radio" name="video-quality" value="4"> 4</label>
+                    <label><input type="radio" name="video-quality" value="5"> 5 (Excellent)</label>
+                </div>
+            </div>
+
+            <!-- Professionalism -->
+            <div class="survey-question">
+                <label for="professionalism">How would you rate the professionalism of the healthcare provider?</label>
+                <div class="rating">
+                    <label><input type="radio" name="professionalism" value="1"> 1 (Poor)</label>
+                    <label><input type="radio" name="professionalism" value="2"> 2</label>
+                    <label><input type="radio" name="professionalism" value="3"> 3</label>
+                    <label><input type="radio" name="professionalism" value="4"> 4</label>
+                    <label><input type="radio" name="professionalism" value="5"> 5 (Excellent)</label>
+                </div>
+            </div>
+
+            <!-- Would you perform a teleconsultation again? -->
+            <div class="survey-question">
+                <label for="teleconsult-again">Would you perform a teleconsultation again in the future?</label>
+                <div>
+                    <label><input type="radio" name="teleconsult-again" value="yes"> Yes</label>
+                    <label><input type="radio" name="teleconsult-again" value="no"> No</label>
+                </div>
+            </div>
+
+            <!-- Additional Comments -->
+            <div class="survey-question">
+                <label for="comments">Additional comments or suggestions:</label>
+                <textarea id="comments" name="comments" rows="4" placeholder="Enter your comments here..."></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="survey-question">
+                <button type="submit">Submit Feedback</button>
+            </div>
+        </form>
+
+        <div class="footer">
+            <p>Thank you for taking the time to complete this survey!</p>
+        </div>
+    </div>
+
+</body>
+</html>
